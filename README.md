@@ -1,5 +1,3 @@
 # guessinggame
-Wed Aug 23 12:42:10 DST 2017
-  
-
-21
+#25 Nov 2020, Wednesday. Time: 12:11
+#Code Lines: 21
