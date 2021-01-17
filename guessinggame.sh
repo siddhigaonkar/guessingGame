@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
 
-function guess(){
-    true_ans=$(ls -l |grep "^-"|wc -l)
+function guessingGame(){
+    fileCount=$(ls -l |grep "^-"|wc -l)
     while true;
     do
-        echo "pleas enter your guess"
-        read  number
-        if [ $number -lt $true_ans ]
+        echo "Enter the file count guess:"
+        read  userInput
+        if [ $userInput -lt $fileCount ]
         then
-            echo "your guess is Less then the true number"
-        elif [ $number -gt $true_ans ]
+            echo "You guessed LESS than true count !"
+        elif [ $userInput -gt $fileCount ]
         then
-            echo "your guess is Greater then the true number"
+            echo "You guessed MORE than true count !"
         else
-            echo " congratulation,you are right!"
+            echo "Great ! You Guessed File count Correct !"
         break;
         fi
     done
 }
-echo "guess the files number in the current directory!"
-guess
+echo "GUESSING GAME: Guess the files in current directory!"
+guessingGame
